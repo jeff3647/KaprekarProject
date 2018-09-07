@@ -19,3 +19,4 @@
  * <code>false</code> otherwise.
  */
 int isKaprekar(int n);
+

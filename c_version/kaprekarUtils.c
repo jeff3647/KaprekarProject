@@ -22,7 +22,7 @@
  * @return <code>true</code> if <code>n</code> is a Kaprekar Number, 
  * <code>false</code> otherwise.
  */
- 
+int isKaprekar(int n);
 int isKaprekar(int n) { //method used to check if number is kaprekar or not
   if(n < 1) { //Kaprekar number can't be less than 1
     return 0; //it was false
