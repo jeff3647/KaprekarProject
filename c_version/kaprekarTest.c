@@ -26,7 +26,7 @@ int main(int argc, char **argv) {
   int numWrong   = 0;
   int i;
     
-  for(i=-10; i<=100000; i++) {
+  for(i = -10; i <= 100000; i++) {
     if(contains(kaprekarNumbers, numKaprekarNumbers, i) != isKaprekar(i)) {
       numWrong++;
       if(contains(kaprekarNumbers, numKaprekarNumbers, i)) {
@@ -40,7 +40,7 @@ int main(int argc, char **argv) {
   }
   printf("Number of tests passed: %d\n", numCorrect);
   printf("Number of tests failed: %d\n", numWrong);
-  double percentCorrect = (double) numCorrect / (numCorrect + numWrong) * 100.0;
+  double percentCorrect = (double)numCorrect / (numCorrect + numWrong) * 100.0;
   printf("Percentage Test Cases passed: %.2f\n", percentCorrect);
 
   return 0;      
@@ -48,7 +48,7 @@ int main(int argc, char **argv) {
 
 static int contains(int arr[], int n, int key) {
   int i;
-  for(i=0; i<n; i++) {
+  for(i = 0; i < n; i++) {
     if(arr[i] == key) {
       return 1;
     }
