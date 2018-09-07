@@ -22,20 +22,21 @@
  * @return <code>true</code> if <code>n</code> is a Kaprekar Number, 
  * <code>false</code> otherwise.
  */
-int isKaprekar(int n) {
-
-  if(n < 1) {
+ 
+int isKaprekar(int n) { //method used to check if number is kaprekar or not
+  if(n < 1) { //Kaprekar number can't be less than 1
     return false;
   }
 
+  //Data initialization
   int i;
-  long square = n * (long) n;
-  int numDigits = (int) log10(n) + 1;
-  long modulus = 0;
+  long square = n * (long)n;
+  int numDigits = (int)log10(square) + 1;
+  long modulus = 1; //if 0, *= 10 will still equals 0
   long first, second;
 
   //for each possible "split" of the square...
-  for(i=1; i<=numberOfDigits; i++) {
+  for(i = 1; i <= numDigits; i++) {
     //increase the modulus by a factor of 10
     modulous *= 10;
 
@@ -44,11 +45,9 @@ int isKaprekar(int n) {
     second = square % modulus;
 
     //test if the split makes a Kaprekar number
-    if(second > 0 &&
-       first + second == n) {
+    if(second > 0 && first + second == n) {
       return 1;
     }
   }
   return 0;
-  
 }
